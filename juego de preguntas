@@ -1,0 +1,190 @@
+#include<iostream>
+#include<string>
+
+
+using namespace std;
+
+int main() 
+{	
+	cout<<"Bienvenido, este es un juego de preguntas y respuestas"; 
+	cout<<"son 2 preguntas por categoria";
+	cout<<"cada respuesta CORRECTA suma 10";
+	cout<<"respuesta ""INCORRECTA"" resta 10, si queres salir durante el juego escribi el numero 0\n";
+	cout<<"Ingrese 1 para preguntas matematicas..\n";
+	cout<<"Ingrese 2 para preguntas de historia..\n";
+	cout<<"Ingrese 3 para preguntas de geografia..\n";
+	cout<<"Ingrese 4 para preguntas de deportes..\n";
+	int opcion, triang, contadorf, respuesta, salir=1, contador1=0, contador2=0, contador3=0, contador4=0;
+	double pi;
+	string resp, minus;
+	bool exit=false; //Booleano para salir del do while.
+	
+	
+	do
+	{
+	cin>>opcion;
+	switch(opcion)
+	{
+		case 1:
+		{
+			cout<<"Elegiste matematicas..\n";
+			cout<<"¿Cuanto suman los angulos internos de un triangulo?\n";
+			cout<<"OPCIONES\n";
+			cout<<"1) 360\n";
+			cout<<"2) 180\n";
+			cout<<"3) 270\n";
+			cout<<"4) 90\n";
+			
+			cin>>triang; // asigna a "triang" la opcion como valor entero
+			if(triang==2)
+			{
+				cout<< "CORRECTO\n";
+				contador1=contador1+10;
+				cout<<"Sumas un total de..."<<contador1<<" puntos en matematicas.\n";
+			}
+			else
+			{
+				cout<<"NOOO!\n";
+				contador1=contador1-10;
+				cout<<"Tenes acumulados..."<<contador1<<" puntos en matematicas.\n";
+			}
+			cout<<"te queda una pregunta mas de esta categoria\n";
+			cout<<"¿que desea hacer?\n";
+			cout<<" 1->continuar\n";
+			cout<<" 2->Cambiar la Tematica\n";
+			cout<<" 0-> Ver resultado final y salir \n";
+			cin>>salir;
+			if(salir==0) //Si elijo salir termina el switch para mostrar score.
+			{
+				  exit=true;
+				  break;
+			}
+				else if (salir==2)
+				break;
+			cout<<"\n";
+			cout<<"Ultima pregunta de esta categoria!\n";
+			cout<<"1)¿Cuanto vale el numero PI?\n";
+			cout<<"introduzca el numero usando solo 2 decimales\n";
+			cin>>pi;
+			if(pi==3.14)
+			{
+				cout<< "CORRECTO\n";
+				contador1=contador1+10;
+				cout<<"Sumas un total de..."<<contador1<<" puntos en matematicas.\n";
+			}
+			else
+			{
+				cout<<"NOOO!\n";
+				contador1=contador1-10;
+				cout<<"Tenes acumulados..."<<contador1<<" puntos en matematicas.\n";
+			}
+			cout<<"Fin de las preguntas sobre matematicas, sumaste "<<contador1<<" puntos.\n";
+			cout<<"Ingresa 2 y luego num de tematica para cambiarla, 0 para salir.\n";
+			cin>>opcion;
+			if(opcion==0)
+			  {
+			  	exit=true;
+			  	break;
+			  }
+			else if(opcion==2)
+				break;
+		}
+			
+		case 2:
+		{
+			cout<<"categoria en construccion!\n";
+			cout<<"categoria en construccion!\n";
+			cout<<"\n";
+			cout<<"******************************\n";
+			cout<<"************* ****************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************* ****************\n";
+			cout<<"******************************\n";
+			cout<<"************* ****************\n";
+			cout<<"************   ***************\n";
+			cout<<"************* ****************\n";
+			cout<<"******************************\n";
+			cout<<"\n";
+			cout<<"oprima 0 para leer resutlados y cerrar la aplicacion";
+			cin>>opcion;
+			if(opcion==0)
+			  {
+			  	exit=true;
+			  	break;
+			}
+		}
+		case 3:
+		{	cout<<"categoria en construccion!\n";
+			cout<<"\n";
+			cout<<"******************************\n";
+			cout<<"************* ****************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************* ****************\n";
+			cout<<"******************************\n";
+			cout<<"************* ****************\n";
+			cout<<"************   ***************\n";
+			cout<<"************* ****************\n";
+			cout<<"******************************\n";
+			cout<<"\n";
+			cout<<"oprima 0 para leer resutlados y cerrar la aplicacion";
+			cin>>opcion;
+			if(opcion==0)
+			  {
+			  	exit=true;
+			  	break;
+				}
+		}
+		case 4:
+		{	cout<<"categoria en construccion!\n";
+			cout<<"\n";
+			cout<<"******************************\n";
+			cout<<"************* ****************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************   ***************\n";
+			cout<<"************* ****************\n";
+			cout<<"******************************\n";
+			cout<<"************* ****************\n";
+			cout<<"************   ***************\n";
+			cout<<"************* ****************\n";
+			cout<<"******************************\n";
+			cout<<"\n";
+			cout<<"oprima 0 para leer resutlados y cerrar la aplicacion";
+			cin>>opcion;
+			if(opcion==0)
+			  {
+			  	exit=true;
+			  	break;
+				}
+		}
+		
+	}
+	}while (exit!=true);
+	cout<<"Puntajes..:\n";
+	cout<<"En matematicas: "<<contador1<<"\n";
+	cout<<"En historia: "<<contador2<<"\n";
+	cout<<"En geografia: "<<contador3<<"\n";
+	cout<<"En deportes: "<<contador4<<"\n";
+	contadorf=contador1+contador2+contador3+contador4;
+	cout<<"Puntaje total: "<<contadorf<<"\n";
+	cout<<"Gracias por jugar.!";
+	
+			
+}
+
